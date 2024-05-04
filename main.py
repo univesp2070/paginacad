@@ -35,7 +35,7 @@ def submit():
     cursor.execute('''INSERT INTO usuario (nome, email, telefone, senha)
                       VALUES (?, ?, ?, ?)''', (nome, email, telefone, senha))
 
-    # fechar
+    # fechando
     conn.commit()
     conn.close()
 
