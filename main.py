@@ -14,7 +14,7 @@ def hello_world():
 def index():
     return render_template('cadastro.html')
 
-# get digitados pelo usuário.
+# get digitado pelo usuário.
 @app.route('/submit', methods=['POST'])
 def submit():
     nome = request.form['nome']
