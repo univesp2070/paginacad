@@ -14,7 +14,7 @@ def hello_world():
 def index():
     return render_template('cadastro.html')
 
-# pega os dados digitados pelo usuário.
+# get digitados pelo usuário.
 @app.route('/submit', methods=['POST'])
 def submit():
     nome = request.form['nome']
@@ -35,7 +35,7 @@ def submit():
     cursor.execute('''INSERT INTO usuario (nome, email, telefone, senha)
                       VALUES (?, ?, ?, ?)''', (nome, email, telefone, senha))
 
-    # fechando
+    # fechar SQLite
     conn.commit()
     conn.close()
 
